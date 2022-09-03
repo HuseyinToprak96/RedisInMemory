@@ -1,0 +1,24 @@
+﻿@model HashSet<string>;
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<form asp-action="Add" method="post"> 
+    <input type="text" name="name"/>
+    <input type="text" name="score"/>
+    <button type="submit" class="btn btn-success">Ekle</button>
+</form>
+<table>
+    <tr>
+        <td>Kişi</td>
+    </tr>
+    <form asp-action="Remove" method="post">
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.ToString()</td>
+            <td><button type="submit" class="btn btn-danger" name="item" value="@item.ToString()">X</button></td>
+        </tr>
+    }</form>
+    </table>

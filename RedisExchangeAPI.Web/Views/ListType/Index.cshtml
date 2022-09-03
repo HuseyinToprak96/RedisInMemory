@@ -1,0 +1,28 @@
+﻿@model List<string>;
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<form asp-action="Add" method="post">
+    <input type="text" name="name"/>
+    <input type="submit"/>
+</form>
+<table class="table">
+    <tr>
+        <th>İsim</th>
+    </tr>
+    <form asp-action="Remove" method="post">
+        @foreach (string item in Model)
+        {
+        <tr>
+            <td>
+               @item</td><td> <button type="submit" value="@item" class="btn btn-danger" name="name">X</button>
+               
+        </tr>
+
+    }</form>
+    </table>
+<form asp-action="DeleteFirstItem" method="post">
+    <input type="submit" value="İlk itemi Sil"/>
+</form>

@@ -1,0 +1,15 @@
+﻿Redis nedir?
+Server kısmında Linux kullanmak daha yaygındır.
+Veri tipleri
+1.Redis String-->Tek bir veri anlamındadır. Normal bildiğimiz string değildir.
+2.Redis List-->dizi tutmak gibidir.Normal list<>'e benzer.
+LPUSH-->DİZİNİN BAŞINA EKLER
+RPUSH-->DİZİNİN SONUNA EKLER
+LPOP-->SOLDAN SİLER
+RPOP-->SAĞDAN SİLER
+3.Redis Set-->içinde dizi tutar.
+set içinde tutulan datalar unique 'dir.Aynı data ikince kez tutulmaz.
+set içine ekleyen veriler random olarak eklenir. Başa sona eklemeye kendi karar verir.
+4.Redis Sorted Set-->sıralama üzerine bir veri tipidir. eklenen verinin sırasını belirleyebiliriz.
+value lar unique olmak zorundadır
+5.Redis hash -->dictionary benzeri bir veri tipidir.

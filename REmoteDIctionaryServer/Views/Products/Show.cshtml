@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "Show";
+    var product = ViewBag.Product as Product;
+
+}
+
+<h1>Show</h1>
+
+@ViewBag.Ad
+
+
+<table class="table">
+    <tr>
+        <th>ID</th><th>AD</th><th>FİYAT</th>
+    </tr>
+    <tr><td>@product.Id</td><td>@product.Name</td><td>@product.Price</td></tr>
+</table>
+<img src="/Products/ImageUrl"/>

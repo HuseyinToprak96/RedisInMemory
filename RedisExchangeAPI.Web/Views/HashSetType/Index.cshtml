@@ -1,0 +1,26 @@
+﻿@model HashSet<string>;
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<form asp-action="Add">
+    <input type="text" name="hashName"/>
+    <input type="submit" value="Ekle"/>
+</form>
+<table>
+    <tr>
+        <th>İsim</th>
+    </tr>
+    <form asp-action="DeleteItem">
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item</td>
+            <td>
+                <button type="submit" value="@item" name="name" class="btn btn-danger">X</button>
+            </td>
+        </tr>
+    }</form>
+    </table>
